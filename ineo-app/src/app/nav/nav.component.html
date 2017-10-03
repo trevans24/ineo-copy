@@ -1,0 +1,95 @@
+<div class="nav flex-column col-sm-3 col-md-2">
+  <div class="nav-title" (mouseenter)="mouseEnter($event)" (mouseleave)="mouseLeave($event)">
+    <div [ngClass]="search">
+      <img src="../../assets/img/INEO-LOGO.svg" alt="ineo-logo" class="logo">
+      <i class="fa fa-search fa-1x search-icon" aria-hidden="true"></i>
+      <input type="text" class="form-control nav-subtext" placeholder="Search Transferee">
+      <i class="glyphicon glyphicon-remove-circle clear" (click)="clear()"></i>
+    </div>
+  </div>
+  <li class="nav-menu nav-text">
+    <a routerLink="#" class="nav-link">Transferee Dashboard</a>
+  </li>
+  <li class="nav-menu nav-text">
+    <a routerLink="#" class="nav-link">Setup</a>
+  </li>
+  <li class="nav-menu nav-text">
+    <a routerLink="#" class="nav-link">Accounting</a>
+  </li>
+  <li class="nav-menu nav-text" (click)="toggleCollapse()" data-target="#collapseExample">
+    <a class="{{nav}}">Tools</a>
+    <div class="collapse" [class.show]="show" id="collapseExample">
+      <ul class="submenu">
+        <li class="nav-subtext">
+          <a routerLink="/approvals">Approvals</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/change-auth">Change Authorization ID</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/copyfile">Copy Files</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/email">Email</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/templates">Email Templates</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/encrypt">Encryption</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/excel-import">Excel Import</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/formulas">Formulas</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/global-updates">Global Updates</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/import-export">Import Export</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/maintain-log">Maintain Log</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/preferences">Preferences</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/restore-delete-history">Restore/Delete/History</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/task-policies">Task Policies</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/ticklers">Ticklers</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/unlock">Unlock Records</a>
+        </li>
+        <li class="nav-subtext">
+          <a routerLink="/user-tasks">User Tasks</a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-menu nav-text">
+    <a routerLink="#" class="nav-link">Reports</a>
+  </li>
+  <li class="nav-menu nav-text">
+    <a routerLink="#" class="nav-link">Custom</a>
+  </li>
+  <li class="nav-menu nav-text">
+    <a routerLink="#" class="nav-link">Tax</a>
+  </li>
+  <li class="nav-menu nav-text">
+    <a routerLink="#" class="nav-link">Lump Sum</a>
+  </li>
+  <li class="nav-menu nav-text">
+    <a routerLink="#" class="nav-link">Global Compensation</a>
+  </li>
+  <li class="nav-menu nav-text">
+    <a routerLink="#" class="nav-link">System Information</a>
+  </li>
+</div>

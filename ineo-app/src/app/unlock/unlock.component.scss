@@ -1,0 +1,489 @@
+// Header
+.header {
+  float: right;
+  margin: 0 0 2% 0;
+  .title {
+    margin: 3% 0 2% 0;
+  }
+  .header-actions {
+    display: flex;
+    .dropdown {
+      background-color: #FFFFFF;
+      border: 0.5px solid #BFC6C8;
+      padding-top: 0.5%;
+      width: 20vw;
+      a {
+        padding: 4% 0 4% 4%;
+        i {
+          height: 1em;
+          margin-left: 80%;
+        }
+      }
+      .dropdown-menu {
+        width: 20vw;
+      }
+    }
+    .search {
+      background-color: #FFFFFF;
+      border: 0.5px solid #BFC6C8;
+      border-radius: 2px;
+      display: flex;
+      margin: 0 8.5% 0 auto;
+      width: 20vw;
+      input {
+        background-color: transparent;
+        border: transparent;
+        font-size: 1.2em;
+        width: 90%;
+      }
+      i {
+        margin: 2% 0 0 2%;
+      }
+    }
+  }
+}
+// Main Body
+.main-body {
+  .list-filters {
+    display: inline;
+    h4 {
+      float: left;
+      font-size: 12px;
+      margin: 0 8%;
+      text-transform: uppercase;
+      i {
+        font-size: 1em;
+      }
+    }
+    .filter-arrows {
+      height: 3em;
+      .top {
+        margin: 0 0 0 2%;
+      }
+      .bottom {
+        margin: 0 0 0 15.7%;
+      }
+    }
+  }
+}
+  // DATA LIST
+  .lock-list {
+    margin: 1% 0 0 0;
+    .panel {
+      border: 0.5px solid #BFC6C8;
+      border-radius: 2px;
+      margin-bottom: 1%;
+      position: relative;
+      div {
+        h3 {
+          // font-size: 17px;
+          margin-top: 1.7%;
+        }
+      }
+      .check {
+        float: left;
+        margin: 2.2% 0 2.7% 2%;
+        width: 5%;
+      }
+      .check:checked + .check-label {
+        border: 2px solid #4FBFA5;
+        height: 100%;
+        position: absolute;
+        margin-left: -6.2%;
+        width: 100%;
+      }
+      .name {
+        float: left;
+        width: 24%;
+      }
+      .auth {
+        float: left;
+        width: 23%;
+        margin-right: 2.5%;
+      }
+      .form {
+        float: left;
+        width: 21%;
+        margin-right: 5%;
+      }
+      .win {
+        float: left;
+      }
+    }
+  }
+
+// MODAL
+.modal-popup {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 15vh;
+  margin: 37% 0 0 16.6%;
+  position: fixed;
+  width: 83%;
+  .modal-content {
+    background-color: transparent;
+    h3 {
+      color: #FFFFFF;
+      font-family: 'ProximaNovaLight';
+      font-size: 1.5em;
+      float: left;
+      margin: 5% 0 0 5%;
+    }
+    .buttons {
+      float: right;
+      margin: 5% 5% 0 0;
+    }
+  }
+}
+
+.modal-popup-false {
+  display: none;
+}
+
+// Alert Message
+.modal {
+  .modal-body {
+    background-color: #FFFFFF;
+    height: 25vh;
+    margin: 10% 0 0 35%;
+    width: 30vw;
+    .modal-title {
+      height: 5vh;
+      width: 100%;
+      hr {
+        background-color: #F2F2F2;
+      }
+      h1 {
+        font-family: 'ProximaNovaRegular';
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        margin-left: 10%;
+        text-transform: uppercase;
+      }
+    }
+    .modal-body-content {
+      h3 {
+        font-family: 'ProximaNovaRegular';
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        margin-left: 10%;
+      }
+      .btn-group {
+        margin: 5% 20%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    .header-actions {
+      .dropdown {
+        padding: 1.5% 0ss;
+        a {
+          margin: 0 0 0 4%;
+          i {
+            margin: 1% 0 0 70%;
+          }
+        }
+      }
+    }
+    .search {
+      input {
+        font-size: 1.2em;
+        height: 100%;
+        width: 90%;
+      }
+      i {
+        margin: 0 2% 0 0;
+      }
+    }
+  }
+  .main-body {
+    .list-filters {
+      margin-bottom: 2%;
+      margin-left: -10%;
+      h4 {
+        font-size: 14px;
+        margin: 0 6%;
+        i {
+          font-size: 1em;
+        }
+      }
+      h4:nth-child(1) {
+        margin: 0 0 0 5%;
+      }
+      h4:nth-child(2) {
+        margin: 0 0 0 15%;
+      }
+      h4:nth-child(3) {
+        margin: 0 0 0 13%;
+      }
+      h4:nth-child(4) {
+        margin: 0 0 0 12%;
+      }
+    }
+  }
+
+  .lock-list {
+    margin-left: -10%;
+    .panel {
+      .check {
+        margin: 2% 0;
+      }
+      .name {
+        width: 21%;
+      }
+      .auth {
+        width: 19%;
+      }
+      .form {
+        width: 18%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .header {
+    .header-actions {
+      .dropdown {
+        padding: 1.5% 0;
+        a {
+          margin: 0 0 0 4%;
+          i {
+            margin: -5% 0 0 60%;
+          }
+        }
+      }
+      .search {
+        margin-left: 45%;
+        input {
+          background-color: transparent;
+          border: transparent;
+          font-size: 1.2em;
+          height: 100%;
+          width: 90%;
+        }
+        i {
+          margin: 6% 2% 0 0;
+        }
+      }
+    }
+  }
+  .main-body {
+    .list-filters {
+      margin-bottom: 2%;
+      margin-left: -10%;
+      h4 {
+        font-size: 12px;
+        margin: 0 6%;
+        i {
+          font-size: 1em;
+        }
+      }
+      h4:nth-child(1) {
+        margin: 0 0 0 5%;
+      }
+      h4:nth-child(2) {
+        margin: 0 0 0 15%;
+      }
+      h4:nth-child(3) {
+        margin: 0 0 0 12%;
+      }
+      h4:nth-child(4) {
+        margin: 0 0 0 10%;
+      }
+    }
+  }
+
+  .lock-list {
+    margin-left: -10%;
+    .panel {
+      margin-bottom: 1%;
+      h3 {
+        font-size: 14px;
+      }
+      .check {
+        margin: 2% 0 0 0;
+        width: 5%;
+      }
+      .check:checked + .check-label {
+        margin-left: -6.75%;
+      }
+      .name {
+        width: 23%;
+      }
+      .auth {
+        width: 21%;
+      }
+      .form {
+        width: 19%;
+      }
+      .locked-data-active {
+        border: 2px solid #4FBFA5;
+        border-radius: 2px;
+        height: 60px;
+        margin: 0 0 0 -2%;
+        width: 104%;
+        .check {
+          margin: 2.5% 0;
+        }
+        .name {
+          margin: 2.5% 0;
+        }
+        .auth {
+          margin: 2.5% 2% 2.5% 0;
+        }
+        .form {
+          margin: 2.5% 3% 2.5% 0;
+        }
+      }
+    }
+  }
+
+  // MODAL
+  .modal-popup {
+    height: 12vh;
+    margin: 35% 0 0 16.5%;
+    width: 85%;
+    .modal-content {
+      .buttons {
+        margin-right: 20%;
+      }
+    }
+  }
+
+  .modal {
+    .modal-body {
+      width: 50vw;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    .header-actions {
+      .dropdown {
+        height: 5vh;
+        padding-top: 1.5%;
+        a {
+          padding: 0 4% 0 -4%;
+          i {
+            margin: 0 0 5% 55%;
+          }
+        }
+      }
+      .search {
+        height: 5vh;
+        margin-left: 27%;
+        input {
+          background-color: transparent;
+          border: transparent;
+          font-size: 1.2em;
+          height: 100%;
+          width: 90%;
+        }
+        i {
+          margin: 7% 5% 0 0;
+        }
+      }
+    }
+  }
+
+  .main-body {
+    .list-filters {
+      margin-bottom: 2%;
+      margin-left: -4%;
+      h4 {
+        font-size: 10px;
+        i {
+          font-size: 1em;
+        }
+      }
+      h4:nth-child(1) {
+        margin: 0 0 0 7%;
+      }
+      h4:nth-child(2) {
+        margin: 0 0 0 11%;
+      }
+      h4:nth-child(3) {
+        margin: 0 0 0 11%;
+      }
+      h4:nth-child(4) {
+        margin: 0 0 0 5%;
+      }
+    }
+  }
+
+  .lock-list {
+    .panel {
+      margin-bottom: 1%;
+      h3 {
+        font-size: 11px;
+      }
+      .check {
+        margin: 2% 0 0 -2%;
+        width: 5.5%;
+      }
+      .name {
+        width: 23%;
+      }
+      .auth {
+        width: 20%;
+        margin-right: 8%;
+      }
+      .form {
+        width: 20%;
+      }
+      .locked-data {
+      }
+      .locked-data-active {
+        border: 2px solid #4FBFA5;
+        border-radius: 2px;
+        height: 60px;
+        margin: 0 0 0 -3.5%;
+        width: 107%;
+        .check {
+          margin: 3.7% 0 3% 1%;
+        }
+        .name {
+          margin: 3.7% -2% 3% 0;
+        }
+        .auth {
+          margin: 4% 6% 3% 0;
+        }
+        .form {
+          margin: 4% 4% 2.5% 0;
+        }
+        .win {
+          margin: 4% 4% 2.5% 0;
+        }
+      }
+    }
+  }
+
+  // MODAL
+  .modal-popup {
+    height: 12vh;
+    margin: 45% 0 0 25%;
+    width: 67%;
+    .modal-content {
+      h3 {
+        margin: 7% 0 0 5%;
+      }
+      .buttons {
+        margin: 7% 5% 0 0;
+      }
+    }
+  }
+  .btn-group {
+    margin: 5% 15%;
+  }
+
+  .modal {
+    .modal-body {
+      margin-left: 25%;
+      width: 60vw;
+    }
+  }
+}
