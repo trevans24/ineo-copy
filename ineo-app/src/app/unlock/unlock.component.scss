@@ -1,19 +1,21 @@
+@import '../../colors';
+
 // Header
 .header {
   float: right;
   margin: 0 0 2% 0;
+  padding-left: 7%;
   .title {
-    margin: 3% 0 2% 0;
+    margin: 2% 0 2% 0;
   }
   .header-actions {
     display: flex;
     .dropdown {
-      background-color: #FFFFFF;
-      border: 0.5px solid #BFC6C8;
-      padding-top: 0.5%;
+      background-color: $primary-white;
+      height: 40px;
+      padding: 1%;
       width: 20vw;
       a {
-        padding: 4% 0 4% 4%;
         i {
           height: 1em;
           margin-left: 80%;
@@ -24,26 +26,31 @@
       }
     }
     .search {
-      background-color: #FFFFFF;
-      border: 0.5px solid #BFC6C8;
+      background-color: $primary-white;
       border-radius: 2px;
       display: flex;
+      height: 40px;
       margin: 0 8.5% 0 auto;
       width: 20vw;
       input {
         background-color: transparent;
-        border: transparent;
+        border: none;
         font-size: 1.2em;
         width: 90%;
       }
+      input:focus {
+        border: none;
+        box-shadow: none;
+      }
       i {
-        margin: 2% 0 0 2%;
+        margin: 4% 0 0 3%;
       }
     }
   }
 }
 // Main Body
 .main-body {
+  padding-left: 6%;
   .list-filters {
     display: inline;
     h4 {
@@ -70,67 +77,87 @@
   .lock-list {
     margin: 1% 0 0 0;
     .panel {
-      border: 0.5px solid #BFC6C8;
       border-radius: 2px;
-      margin-bottom: 1%;
       position: relative;
+      margin-bottom: 0.2%;
       div {
         h3 {
-          // font-size: 17px;
           margin-top: 1.7%;
         }
       }
       .check {
+        -webkit-appearance: none;
+      	border: 1px solid $primary-mid-grey;
+      	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+      	padding: 10px;
+      	border-radius: 3px;
+      	display: inline-block;
+      	position: relative;
         float: left;
-        margin: 2.2% 0 2.7% 2%;
-        width: 5%;
+        margin: 2.2% 5% 2.7% 1%;
+      }
+      .check:checked {
+        background-color: $action;
+      }
+      .check:checked:after {
+        color: $primary-white;
+        content: '\2713';
+      	font-size: 14px;
+      	position: absolute;
+      	top: 0px;
+      	left: 3px;
       }
       .check:checked + .check-label {
-        border: 2px solid #4FBFA5;
+        border: 1px solid $action;
+        color: $primary-white;
         height: 100%;
         position: absolute;
-        margin-left: -6.2%;
-        width: 100%;
+        margin-left: -3.7%;
+        width: 102%;
       }
       .name {
         float: left;
+        padding: 0.5% 0 0 0;
         width: 24%;
       }
       .auth {
         float: left;
+        padding: 0.5% 0 0 0;
         width: 23%;
         margin-right: 2.5%;
       }
       .form {
         float: left;
+        padding: 0.5% 0 0 0;
         width: 21%;
         margin-right: 5%;
       }
       .win {
         float: left;
+        padding: 0.5% 0 0 0;
       }
     }
   }
 
 // MODAL
 .modal-popup {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #000E20;
   height: 15vh;
-  margin: 37% 0 0 16.6%;
+  margin: 55% 0 0 16.7%;
   position: fixed;
-  width: 83%;
+  opacity: 0.8;
+  width: 84%;
   .modal-content {
     background-color: transparent;
     h3 {
-      color: #FFFFFF;
-      font-family: 'ProximaNovaLight';
+      color: $primary-white;
       font-size: 1.5em;
       float: left;
-      margin: 5% 0 0 5%;
+      margin: 5% 0 0 7%;
     }
     .buttons {
       float: right;
-      margin: 5% 5% 0 0;
+      margin: 5% 9% 0 0;
     }
   }
 }
@@ -141,34 +168,22 @@
 
 // Alert Message
 .modal {
+  width: 65vw;
   .modal-body {
-    background-color: #FFFFFF;
-    height: 25vh;
-    margin: 10% 0 0 35%;
+    background-color: $primary-white;
+    border-radius: 2px;
+    margin: 10% 0 0 0;
     width: 30vw;
     .modal-title {
-      height: 5vh;
+      border-bottom: 2px solid $primary-mid-grey;
+      height: 3vh;
+      padding: 0 0 0 3%;
       width: 100%;
-      hr {
-        background-color: #F2F2F2;
-      }
-      h1 {
-        font-family: 'ProximaNovaRegular';
-        font-size: 15px;
-        letter-spacing: 1.5px;
-        margin-left: 10%;
-        text-transform: uppercase;
-      }
     }
     .modal-body-content {
-      h3 {
-        font-family: 'ProximaNovaRegular';
-        font-size: 13px;
-        letter-spacing: 1.5px;
-        margin-left: 10%;
-      }
+      margin: 10% 0 0 6%;
       .btn-group {
-        margin: 5% 20%;
+        margin: 5% 0 2% 40%;
       }
     }
   }
@@ -176,17 +191,6 @@
 
 @media (min-width: 1440px) {
   .header {
-    .header-actions {
-      .dropdown {
-        padding: 1.5% 0ss;
-        a {
-          margin: 0 0 0 4%;
-          i {
-            margin: 1% 0 0 70%;
-          }
-        }
-      }
-    }
     .search {
       input {
         font-size: 1.2em;
@@ -204,7 +208,7 @@
       margin-left: -10%;
       h4 {
         font-size: 14px;
-        margin: 0 6%;
+        // margin: 0 8%;
         i {
           font-size: 1em;
         }
@@ -227,31 +231,38 @@
   .lock-list {
     margin-left: -10%;
     .panel {
+      h3 {
+        font-size: 15px;
+      }
       .check {
         margin: 2% 0;
       }
+      .check:checked:after {
+      	left: 5px;
+      }
       .name {
-        width: 21%;
+        margin-left: 3%;
+        width: 22%;
       }
       .auth {
-        width: 19%;
+        width: 21%;
       }
       .form {
-        width: 18%;
+        width: 19%;
       }
     }
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
   .header {
     .header-actions {
       .dropdown {
-        padding: 1.5% 0;
+        padding: 1% 0;
         a {
           margin: 0 0 0 4%;
           i {
-            margin: -5% 0 0 60%;
+            margin: -5% 0 0 70%;
           }
         }
       }
@@ -259,7 +270,115 @@
         margin-left: 45%;
         input {
           background-color: transparent;
-          border: transparent;
+          font-size: 1.2em;
+          height: 100%;
+          width: 90%;
+        }
+        i {
+          margin: 5% 2% 0 0;
+        }
+      }
+    }
+  }
+  .main-body {
+    .list-filters {
+      margin-bottom: 2%;
+      margin-left: -12%;
+      h4 {
+        font-size: 12px;
+        margin: 0 6%;
+        i {
+          font-size: 1em;
+        }
+      }
+      h4:nth-child(1) {
+        margin: 0 0 0 5%;
+      }
+      h4:nth-child(2) {
+        margin: 0 0 0 15%;
+      }
+      h4:nth-child(3) {
+        margin: 0 0 0 12%;
+      }
+      h4:nth-child(4) {
+        margin: 0 0 0 10%;
+      }
+    }
+  }
+
+  .lock-list {
+    margin-left: -10%;
+    .panel {
+      height: 60px;
+      h3 {
+        font-size: 14px;
+      }
+      .check {
+        left: 5px;
+        margin-left: -1.5%;
+      }
+      .check:checked:after {
+        left: 2px;
+      }
+      .check:checked + .check-label {
+        margin-left: -3%;
+      }
+      .name {
+        margin-left: -3%;
+        padding-top: 1%;
+        width: 22%;
+      }
+      .auth {
+        padding-top: 1%;
+        width: 19%;
+      }
+      .form {
+        padding-top: 1%;
+        width: 17%;
+      }
+      .win {
+        padding-top: 1%;
+      }
+    }
+  }
+
+  // MODAL
+  .modal-popup {
+    height: 12vh;
+    margin: 51% 0 0 16.5%;
+    width: 85%;
+    .modal-content {
+      margin-left: 3%;
+      .buttons {
+        margin-right: 10%;
+      }
+    }
+  }
+
+  .modal {
+    .modal-body {
+      margin: 30% 0 30% 40%;
+      width: 40vw;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .header {
+    .header-actions {
+      .dropdown {
+        padding: 1% 0;
+        a {
+          margin: 0 0 0 7%;
+          i {
+            margin: -4% 0 0 60%;
+          }
+        }
+      }
+      .search {
+        margin-left: 45%;
+        input {
+          background-color: transparent;
           font-size: 1.2em;
           height: 100%;
           width: 90%;
@@ -299,44 +418,33 @@
   .lock-list {
     margin-left: -10%;
     .panel {
-      margin-bottom: 1%;
+      height: 50px;
       h3 {
         font-size: 14px;
       }
       .check {
         margin: 2% 0 0 0;
-        width: 5%;
+      }
+      .check:checked:after {
+        left: 5px;
       }
       .check:checked + .check-label {
-        margin-left: -6.75%;
+        margin-left: -4.45%;
       }
       .name {
-        width: 23%;
+        padding: 0.5% 0 0 0;
+        width: 22%;
       }
       .auth {
-        width: 21%;
+        padding: 0.5% 0 0 0;
+        width: 20%;
       }
       .form {
-        width: 19%;
+        padding: 0.5% 0 0 0;
+        width: 18%;
       }
-      .locked-data-active {
-        border: 2px solid #4FBFA5;
-        border-radius: 2px;
-        height: 60px;
-        margin: 0 0 0 -2%;
-        width: 104%;
-        .check {
-          margin: 2.5% 0;
-        }
-        .name {
-          margin: 2.5% 0;
-        }
-        .auth {
-          margin: 2.5% 2% 2.5% 0;
-        }
-        .form {
-          margin: 2.5% 3% 2.5% 0;
-        }
+      .win {
+        padding: 0.5% 0 0 0;
       }
     }
   }
@@ -344,7 +452,7 @@
   // MODAL
   .modal-popup {
     height: 12vh;
-    margin: 35% 0 0 16.5%;
+    margin: 50% 0 0 15.2%;
     width: 85%;
     .modal-content {
       .buttons {
@@ -356,134 +464,6 @@
   .modal {
     .modal-body {
       width: 50vw;
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .header {
-    .header-actions {
-      .dropdown {
-        height: 5vh;
-        padding-top: 1.5%;
-        a {
-          padding: 0 4% 0 -4%;
-          i {
-            margin: 0 0 5% 55%;
-          }
-        }
-      }
-      .search {
-        height: 5vh;
-        margin-left: 27%;
-        input {
-          background-color: transparent;
-          border: transparent;
-          font-size: 1.2em;
-          height: 100%;
-          width: 90%;
-        }
-        i {
-          margin: 7% 5% 0 0;
-        }
-      }
-    }
-  }
-
-  .main-body {
-    .list-filters {
-      margin-bottom: 2%;
-      margin-left: -4%;
-      h4 {
-        font-size: 10px;
-        i {
-          font-size: 1em;
-        }
-      }
-      h4:nth-child(1) {
-        margin: 0 0 0 7%;
-      }
-      h4:nth-child(2) {
-        margin: 0 0 0 11%;
-      }
-      h4:nth-child(3) {
-        margin: 0 0 0 11%;
-      }
-      h4:nth-child(4) {
-        margin: 0 0 0 5%;
-      }
-    }
-  }
-
-  .lock-list {
-    .panel {
-      margin-bottom: 1%;
-      h3 {
-        font-size: 11px;
-      }
-      .check {
-        margin: 2% 0 0 -2%;
-        width: 5.5%;
-      }
-      .name {
-        width: 23%;
-      }
-      .auth {
-        width: 20%;
-        margin-right: 8%;
-      }
-      .form {
-        width: 20%;
-      }
-      .locked-data {
-      }
-      .locked-data-active {
-        border: 2px solid #4FBFA5;
-        border-radius: 2px;
-        height: 60px;
-        margin: 0 0 0 -3.5%;
-        width: 107%;
-        .check {
-          margin: 3.7% 0 3% 1%;
-        }
-        .name {
-          margin: 3.7% -2% 3% 0;
-        }
-        .auth {
-          margin: 4% 6% 3% 0;
-        }
-        .form {
-          margin: 4% 4% 2.5% 0;
-        }
-        .win {
-          margin: 4% 4% 2.5% 0;
-        }
-      }
-    }
-  }
-
-  // MODAL
-  .modal-popup {
-    height: 12vh;
-    margin: 45% 0 0 25%;
-    width: 67%;
-    .modal-content {
-      h3 {
-        margin: 7% 0 0 5%;
-      }
-      .buttons {
-        margin: 7% 5% 0 0;
-      }
-    }
-  }
-  .btn-group {
-    margin: 5% 15%;
-  }
-
-  .modal {
-    .modal-body {
-      margin-left: 25%;
-      width: 60vw;
     }
   }
 }

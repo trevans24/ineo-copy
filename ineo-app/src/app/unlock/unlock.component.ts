@@ -237,15 +237,14 @@ winSort() {
   // Unlock
   unlock() {
     let observer = {
-      next(data) {
-        data => console.log(data)
+      next() {
+        return
       },
       error(error) {
-        return new Error('Post Error');
+        return new Error();
       },
       complete() {
-        console.log("Completed");
-        // window.location.reload();
+        window.location.reload();
       }
     };
     // On unlock send lock data to Service for POST
@@ -258,6 +257,15 @@ winSort() {
       this.locked = data;
       this.initial = data;
     });
+    // let submenu = document.querySelector('#collapse');
+    // let tools = document.querySelector('#tools');
+    // if(window.location.href === 'http://localhost:4200/unlock' || 'https://ineo-53549.firebaseapp.com/unlock') {
+    //   submenu.setAttribute('class', '');
+    //   setTimeout(()=> {
+    //     tools.removeAttribute('nav-link');
+    //     tools.setAttribute('class', 'nav-link-active nav-menu-active-text')
+    //   }, 100)
+    // }
   }
 
 }

@@ -7,17 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   nav: string = 'nav-link';
-  show: boolean = false;
   search: string = 'search';
 
   toggleCollapse() {
-    // change show
-    this.show = !this.show;
     // Change style of active link
-    if (this.show !== true) {
-      this.nav = 'nav-link';
-    } else {
+    if (this.nav = 'nav-link') {
       this.nav = 'nav-link-active';
+    } else {
+      this.nav = 'nav-link';
     }
   }
 

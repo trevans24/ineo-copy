@@ -1,0 +1,137 @@
+// globals for font colors
+@import './colors.scss';
+
+// Text Styles
+// Light
+@font-face {
+  font-family: 'ProximaNovaLight';
+  font-weight: lighter;
+  src: url('./assets/fonts/ProximaNova-Font/ProximaNovaLight.ttf') format('truetype'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaLight.eot') format('embedded-opentype'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaLight.woff') format('woff'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaLight.svg') format('svg');
+}
+
+// Regular
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  font-weight: normal;
+  src: url('./assets/fonts/ProximaNova-Font/ProximaNovaRegular.ttf') format('truetype'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaRegular.eot') format('embedded-opentype'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaRegular.woff') format('woff'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaRegular.svg') format('svg');
+}
+
+// Semibold
+@font-face {
+  font-family: 'ProximaNovaSemibold';
+  font-weight: bold;
+  src: url('./assets/fonts/ProximaNova-Font/ProximaNovaSemibold.ttf') format('truetype'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaSemibold.eot') format('embedded-opentype'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaSemibold.woff') format('woff'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaSemibold.svg') format('svg');
+}
+
+// Bold
+@font-face {
+  font-family: 'ProximaNovaBold';
+  font-weight: bolder;
+  src: url('./assets/fonts/ProximaNova-Font/ProximaNovaBold.ttf') format('truetype'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaBold.eot') format('embedded-opentype'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaBold.woff') format('woff'),
+    url('./assets/fonts/ProximaNova-Font/ProximaNovaBold.svg') format('svg');
+}
+
+.header-text {
+  font-family: 'ProximaNovaBold';
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.subheader-text {
+  font-family: 'ProximaNovaRegular';
+  font-size: 20px;
+  letter-spacing: 0.8px;
+}
+
+.button-text {
+  font-family: 'ProximaNovaBold';
+  font-size: 15px;
+  letter-spacing: 0px;
+}
+
+.label-text {
+  color: $primary-mid-grey;
+  font-family: 'ProximaNovaSemiBold';
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.card-text {
+  font-family: 'ProximaNovaRegular';
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.body-text {
+  font-family: 'ProximaNovaRegular';
+  font-size: 15px;
+  letter-spacing: 0px;
+}
+
+.small-text {
+  font-family: 'ProximaNovaLight';
+  font-size: 13px;
+  letter-spacing: 0px;
+}
+
+.modal-title {
+  color: $primary-dark-blue;
+  font-family: 'ProximaNovaBold';
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.modal-body-text {
+  color: $primary-dark-blue;
+  font-family: 'ProximaNovaRegular';
+  font-size: 14px;
+}
+// NAV TEXT
+.nav-text {
+  color: $primary-mid-grey;
+  font-family: 'ProximaNovaRegular';
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.nav-subtext {
+  color: $primary-white;
+  font-family: 'ProximaNovaRegular';
+  font-size: 13px;
+  letter-spacing: 0px;
+  margin: 10% 0;
+}
+
+.nav-menu-active-text {
+  color: $primary-white;
+  font-family: 'ProximaNovaBold';
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.nav-submenu-active-text {
+  color: $action-nav;
+  font-family: 'ProximaNovaBold';
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.nav-subtext a:hover, .nav-subtext a:focus, .nav-subtext a:active {
+  color: $action-nav;
+  font-family: 'ProximaNovaBold';
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}

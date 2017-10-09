@@ -1,22 +1,10 @@
-$primary-dark-blue: #0A2240;
-$primary-light-blue: #758699;
-$primary-mid-grey: #BFC6C8;
-$primary-light-grey: #F2F2F2;
-$primary-white: #FFFFFF;
-
-// Action & Nav Colors
-$action: #4FBFA5;
-$action-nav: #00B9F2;
-
-// Box Shadow
-$box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+@import '../../colors';
 
 // Main Nav
 .nav-title {
   box-shadow: $box-shadow;
   color: $primary-white;
   height: 6vh;
-  margin-bottom: -8%;
   width: 105%;
 }
 
@@ -26,37 +14,42 @@ $box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .nav > li {
-  margin: 16% 0;
+  margin: 6% 0 0 0;
   padding: 0;
 }
 
 .nav > li > a {
   color: $primary-mid-grey;
-  padding: 5% 25px 0 25px;
+  padding: 5% 25px;
+  width: 105%;
 }
 
-.nav-link-active {
-  background-color: #394B65;
-  border-left: 4px solid $action-nav;
-  color: #FFFFFF;
+.nav > li > a:active, .nav > li > a:focus {
+  background-color: $nav-background-active;
+  border-left: 6px solid $action-nav;
+  color: $primary-white !important;
   height: 5vh;
-  margin-bottom: -10%;
-  padding: 5% 0 0 10%;
-  width: 105%;
+  margin: 0 0 -10% 0;
+  padding: 7% 0 0 9%;
+}
+
+.active {
+  background-color: $nav-background-active;
+  border-left: 6px solid $action-nav;
+  color: $primary-white !important;
+  height: 5vh;
+  margin: 0 0 -10% 0;
+  padding: 7% 0 0 9%;
 }
 
 .nav > li > a:hover {
-  background-color: #394B65;
-  color: #FFFFFF;
-  height: 6vh;
-  margin-bottom: -10%;
-  padding: 5% 0 0 8%;
-  width: 105%;
+  background-color: $nav-background-active;
+  color: $primary-white;
 }
 
 // Menu Title
 .search {
-  color: #FFFFFF;
+  color: $primary-white;
   height: 100%;
   margin: 0 12% 0 0;
   width: 100%;
@@ -67,7 +60,7 @@ $box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
   i.search-icon {
     float: right;
-    margin: 7% 4% 0 0;
+    margin: 8% 5% 0 0;
   }
   input {
     display: none;
@@ -83,47 +76,73 @@ $box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
   i.search-icon {
     float: left;
-    margin: 7% 0 0 4%;
+    margin: 8% 0 0 4%;
   }
   input {
     background-color: transparent;
     border: 0px;
-    color: #FFFFFF;
+    color: $primary-white;
     float: left;
     font-size: 1.2em;
-    margin: 5% -5% 0 -5%;
+    margin: 5% -5% 5% -7%;
     padding-left: 10%;
     width: 14vw;
+  }
+  input::-webkit-input-placeholder {
+    color: $primary-white;
+  }
+  input:focus {
+    border: none;
+    box-shadow: none;
   }
   i.clear {
     font-size: 1.2em;
     float: right;
-    margin: 7% 7% 0 0;
+    margin: 8% 7% 0 0;
   }
 }
 
 // Menu
 .submenu {
-  background-color: #394B65;
+  background-color: $nav-background-active;
   padding: 2% 0 2% 15%;
-  width: 105%;
+  width: 107%;
 }
 
-.nav-subtext a:hover, .nav-subtext a:focus, .nav-subtext a:active {
-  color: #00B9F2;
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .nav > li > a:hover {
-    width: 109%;
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .nav > li > a {
+    width: 107%;
   }
 
   .nav > li > a:active, .nav > li > a:focus {
-    width: 109%;
+    width: 107%;
+  }
+
+  .nav > li > a:hover {
+    width: 107%;
+  }
+
+  .submenu {
+    width: 107%;
+  }
+}
+
+// SMALL DESKTOP/LAPTOP
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .nav > li > a {
+    width: 107%;
+  }
+
+  .nav > li > a:hover {
+    width: 107%;
+  }
+
+  .nav > li > a:active, .nav > li > a:focus {
+    width: 107%;
   }
 
   .nav-title {
-    width: 109%;
+    width: 107%;
   }
   .search {
     .logo {
@@ -139,10 +158,11 @@ $box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
     input {
       font-size: 1em;
-      width: 12vw;
+      margin-right: -5%;
+      width: 11vw;
     }
     i.clear {
-      margin-top: 9%;
+      margin-top: 10%;
     }
   }
 
@@ -151,23 +171,8 @@ $box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
 
   .submenu {
-    padding: 2% 5% 2% 10%;
-    width: 109%;
+    padding: 2% 5% 2% 15%;
+    width: 107%;
   }
 
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .nav > li > a:hover {
-    width: 108.25%;
-  }
-
-  .nav > li > a:active, .nav > li > a:focus {
-    width: 108.25%;
-  }
-
-  .submenu {
-    padding: 2% 5% 2% 8%;
-    width: 108.25%;
-  }
 }

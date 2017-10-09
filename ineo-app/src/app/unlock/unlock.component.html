@@ -26,31 +26,31 @@
   <div class="list-filters col-sm-12 col-md-12">
     <h4 class="label-text">
       User
-      <i (click)="userSort('user')" class="glyphicon bottom {{userSorted}}" [ngClass]=""></i>
+      <i (click)="userSort()" class="glyphicon bottom {{userSorted}}"></i>
     </h4>
     <h4 class="label-text">
       Auth ID
-      <i (click)="authSort('auth')" class="glyphicon bottom {{authSorted}}" [ngClass]=""></i>
+      <i (click)="authSort()" class="glyphicon bottom {{authSorted}}"></i>
     </h4>
     <h4 class="label-text">
       Form Name
-      <i (click)="formSort('form')" class="glyphicon bottom {{formSorted}}" [ngClass]=""></i>
+      <i (click)="formSort()" class="glyphicon bottom {{formSorted}}"></i>
     </h4>
     <h4 class="label-text">
       Win Handle
-      <i (click)="winSort('win')" class="glyphicon bottom {{winSorted}}" [ngClass]=""></i>
+      <i (click)="winSort()" class="glyphicon bottom {{winSorted}}"></i>
     </h4>
   </div>
   <div class="lock-list">
     <!-- *ngFor="#lock of locked; #i=index"-->
-    <div class="panel panel-default col-sm-10" *ngFor="let lock of locked | search: term">
+    <div class="panel panel-default col-sm-10" *ngFor="let lock of locked">
       <div>
         <input type="checkbox" ngModel="lock.checked" (change)="openModal($event, lock)" class="check" id="{{lock.ID}}">
         <label for="{{lock.ID}}" class="check-label"></label>
-        <h3 class="body-text name" ngModel="lock.name">{{lock.User}}</h3>
-        <h3 class="body-text auth" ngModel="lock.auth">{{lock.AuthID}}</h3>
-        <h3 class="body-text form" ngModel="lock.form">{{lock.FormName}}</h3>
-        <h3 class="body-text win" ngModel="lock.win">{{lock.WinHandle}}</h3>
+        <h3 class="card-text name" ngModel="lock.name">{{lock.User}}</h3>
+        <h3 class="card-text auth" ngModel="lock.auth">{{lock.AuthID}}</h3>
+        <h3 class="card-text form" ngModel="lock.form">{{lock.FormName}}</h3>
+        <h3 class="card-text win" ngModel="lock.win">{{lock.WinHandle}}</h3>
       </div>
     </div>
   </div>
@@ -69,11 +69,10 @@
 <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-body">
     <div class="modal-title">
-      <h1>Unlock Request</h1>
-      <hr>
+      <h1 class="modal-title">Unlock Request</h1>
     </div>
     <div class="modal-body-content">
-      <h3 class="header-text">Are you sure you want to unlock ({{unlocked.length}}) record(s)?</h3>
+      <h3 class="modal-body-text">Are you sure you want to unlock ({{unlocked.length}}) record(s)?</h3>
       <div class="btn-group">
         <button class="btn-secondary" data-toggle="modal" data-target="#myModal">
           Cancel
